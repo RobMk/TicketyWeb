@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.ticketyweb.nazwa.model.Ticket" table="tickety">
+  <id name="nrTicketa" type="long" column="NR_TICKETA">
+            <generator class="increment">
+                
+<!--            <generator class="sequence">
+                <param name="sequence">produkty_seq</param>-->
+            </generator>                        
+        </id>
+        
+        <property name="tytulTicketa" type="string" column="TYTUL_TICKETA"/>
+        <property name="opisTicketa" type="string" column="OPIS_TICKETA"/>
+<!--        <property name="typTickety" type="long" column="NR_TT"/>
+        <property name="priorytet" type="long" column="NR_PRIORYTETU"/>
+        <property name="status" type="long" column="NR_STATUSU"/>
+        <property name="operator" type="long" column="NR_OPERATORA"/>-->
+        
+        <many-to-one name="typTickety" class="com.ticketyweb.nazwa.model.TypTicketu" 
+        column="NR_TT" cascade="none" not-null="false"/>
+        <many-to-one name="priorytet" class="com.ticketyweb.nazwa.model.Priorytet" 
+        column="NR_PRIORYTETU" cascade="none" not-null="false"/>
+        <many-to-one name="status" class="com.ticketyweb.nazwa.model.Status" 
+        column="NR_STATUSU" cascade="none" not-null="false"/>
+        <many-to-one name="operator" class="com.ticketyweb.nazwa.model.Operator" 
+        column="NR_OPERATORA" cascade="none" not-null="false"/>
+  </class>
+</hibernate-mapping>

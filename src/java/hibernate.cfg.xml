@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://sql.panrufus.nazwa.pl:3306/panrufus?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">panrufus</property>
+    <property name="hibernate.connection.password">Tickety123</property>
+  
+    <property name="hbm2ddl.auto">update</property>
+  
+    <mapping resource="com/ticketyweb/nazwa/model/Operator.hbm.xml"/>
+    <mapping resource="com/ticketyweb/nazwa/model/Priorytet.hbm.xml"/>
+    <mapping resource="com/ticketyweb/nazwa/model/Status.hbm.xml"/>
+    <mapping resource="com/ticketyweb/nazwa/model/Ticket.hbm.xml"/>
+    <mapping resource="com/ticketyweb/nazwa/model/TypTicketu.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

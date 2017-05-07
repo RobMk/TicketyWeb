@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ticketyweb.nazwa.model.Operator" table="operatorzy">
+        <id name="nrOperatora" type="long" column="NR_OPERATORA">
+            <generator class="increment"></generator>                        
+        </id>
+        
+        <property name="imie" type="string" column="IMIE"/>
+        <property name="nazwisko" type="string" column="NAZWISKO"/>
+    </class>
+</hibernate-mapping>

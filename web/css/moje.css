@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-02-21, 07:14:19
+    Author     : andrzej
+*/
+html *
+{
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif !important;
+}
+.moje_css{
+    background-color: blueviolet;
+    color: #e0e0e0;
+    
+       
+}
