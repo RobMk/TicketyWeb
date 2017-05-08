@@ -2,11 +2,8 @@
 package com.ticketyweb.nazwa.dao;
 
 import com.ticketyweb.nazwa.model.Operator;
-import com.ticketyweb.nazwa.model.Ticket;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import com.ticketyweb.nazwa.utils.DatabaseConnector;

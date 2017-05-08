@@ -46,58 +46,5 @@ public class EditController {
         return"redirect:/testspring/showtickets.io";
     }
     
-//    @Override
-//    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-//            throws ServletException, IOException {
-//        Long id = new Long(request.getParameter("id"));
-//        request.setAttribute("et", tDao.getOne(id));
-//        request.setAttribute("es", sDao.getAll());
-//        request.setAttribute("ett", ttDao.getAll());
-//        request.setAttribute("ep", pDao.getAll());
-//        request.setAttribute("eo", oDao.getAll());
-//        request.getRequestDispatcher("WEB-INF/jsp/editDetails.jsp").forward(request, response);
-//    }
-
-//    @Override
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-//            throws ServletException, IOException {
-//        System.out.println("cos wyswietl");
-//
-//        String nr = request.getParameter("id");
-//        String status = request.getParameter("status");
-//        String typ = request.getParameter("typ");
-//        String priorytet = request.getParameter("priorytet");
-//        String operator = request.getParameter("operator");
-//
-//        System.out.println("nr: " + nr);
-//        System.out.println("status: " + status);
-//        System.out.println("typ: " + typ);
-//        System.out.println("prior: " + priorytet);
-//        System.out.println("oper: " + operator);
-//        System.out.println(" ************************************ ");
-//
-//        Long idTicketu = new Long(request.getParameter("id"));
-//
-//        if (request.getParameter("status") != null) {
-//            System.out.println("Zmiana statusu");
-//            Long idStatusu = new Long(request.getParameter("status"));
-//            tDao.editStatus(idTicketu, idStatusu);
-//        } else if (request.getParameter("typ") != null) {
-//            System.out.println("Zmiana typ ticketa");
-//            Long idTypTicketu = new Long(request.getParameter("typ"));
-//            tDao.editTypTicketu(idTicketu, idTypTicketu);
-//        } else if ((request.getParameter("priorytet") != null)) {
-//            System.out.println("Zmiana priorytetu");
-//            Long idPriorytetu = new Long(request.getParameter("priorytet"));
-//            tDao.editPriorytet(idTicketu, idPriorytetu);
-//        } else if (request.getParameter("operator") != null) {
-//            System.out.println("Zmiana operatora");
-//            Long idOperatora = new Long(request.getParameter("operator"));
-//            tDao.editOperator(idTicketu, idOperatora);
-//        }
-//
-//        response.sendRedirect("showTickets.do");
-//
-//    }
 
 }

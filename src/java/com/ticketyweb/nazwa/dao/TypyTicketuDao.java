@@ -18,27 +18,7 @@ import org.hibernate.Session;
  */
 public class TypyTicketuDao {
 
-//      public List<TypTicketu> getAll() {
-//        String sql = "select * from typy_ticketow";
-//        List<TypTicketu> wynik = new ArrayList<TypTicketu>();
-//        try {
-//            Connection connection = DatabaseConnector.getConnection();
-//            ResultSet rows = null;
-//            Statement s = connection.createStatement();
-//            rows = s.executeQuery(sql);
-//            while (rows.next()) {
-//                TypTicketu o = new TypTicketu();              
-//                o.setNrTt(rows.getLong("nr_tt"));
-//                o.setNazwaTt(rows.getString("nazwa_tt"));
-//                wynik.add(o);
-//            }
-//            rows.close();
-//            s.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return wynik;
-//    }
+
       public List<TypTicketu> getAll(){
         List<TypTicketu> typT = new ArrayList<TypTicketu>();
         System.out.println("wykonuje getAll TypuTicketu");

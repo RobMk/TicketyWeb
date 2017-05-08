@@ -26,6 +26,8 @@
                 <table border="1" class="table table-hover">
 
                     <form:hidden path="nrTicketa"/>
+                   
+                    
                     <tr><td>Tytuł</td><td><form:input  path="tytulTicketa" type="text" cssClass="form-control"/></td></tr>
                     <tr><td>Opis</td><td><form:input path="opisTicketa" cssClass="form-control"/></td></tr>
                     <tr>

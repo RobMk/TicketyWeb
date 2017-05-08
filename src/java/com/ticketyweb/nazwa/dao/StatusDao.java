@@ -12,27 +12,7 @@ import org.hibernate.Session;
  */
 public class StatusDao {
 
-//    public List<Status> getAll() {
-//        String sql = "select * from statusy";
-//        List<Status> wynik = new ArrayList<Status>();
-//        try {
-//            Connection connection = DatabaseConnector.getConnection();
-//            ResultSet rows = null;
-//            Statement s = connection.createStatement();
-//            rows = s.executeQuery(sql);
-//            while (rows.next()) {
-//                Status status = new Status();              
-//                status.setNrStatusu(rows.getLong("nr_statusu"));
-//                status.setNazwaStatusu(rows.getString("nazwa_statusu"));
-//                wynik.add(status);
-//            }
-//            rows.close();
-//            s.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return wynik;
-//    }
+
     public List<Status> getAll() {
         List<Status> status = new ArrayList<Status>();
         System.out.println("wykonuje getAll  Statusu");
