@@ -20,12 +20,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class EditController {
 
-
-    PriorytetDao pDao = new PriorytetDao();
-    TypyTicketuDao ttDao = new TypyTicketuDao();
-    TicketDao tDao = new TicketDao();
-    StatusDao sDao = new StatusDao();
-    OperatorDao oDao = new OperatorDao();
+    @Autowired
+    PriorytetDao pDao;// = new PriorytetDao();
+    @Autowired
+    TypyTicketuDao ttDao;// = new TypyTicketuDao();
+    @Autowired
+    TicketDao tDao;// = new TicketDao();
+    @Autowired
+    StatusDao sDao;// = new StatusDao();
+    @Autowired
+    OperatorDao oDao;// = new OperatorDao();
 
     @RequestMapping(value = "/editdetails.io", method = RequestMethod.GET)
     public String showForm(@RequestParam Long id, Model model) {

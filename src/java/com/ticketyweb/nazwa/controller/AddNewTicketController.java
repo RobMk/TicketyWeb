@@ -25,13 +25,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AddNewTicketController {
 
-   
-    PriorytetDao pDao = new PriorytetDao();
-    TypyTicketuDao ttDao = new TypyTicketuDao();
-    TicketDao tDao = new TicketDao();
-    StatusDao sDao = new StatusDao();
-    OperatorDao oDao = new OperatorDao();
-    
+    @Autowired
+    PriorytetDao pDao;
+    @Autowired
+    TypyTicketuDao ttDao;
+    @Autowired
+    TicketDao tDao;
+    @Autowired
+    StatusDao sDao;
+    @Autowired
+    OperatorDao oDao;
+
     @RequestMapping(value = "/newticket.io", method = RequestMethod.GET)
     public String addNewTicket(Model model) {
         model.addAttribute("addticket", new Ticket());
