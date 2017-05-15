@@ -6,6 +6,7 @@
 package com.ticketyweb.nazwa.controller;
 
 import com.ticketyweb.nazwa.dao.TicketDao;
+import com.ticketyweb.nazwa.model.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,17 +14,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/**
+ *
+ * @author Robo
+ */
 @Controller
-public class DetailController {
+public class DeleteTIcketController {
 
     @Autowired
     TicketDao tDao;
 
-    @RequestMapping(value = "/showdetail.io", method = RequestMethod.GET)
-    public String showForm(@RequestParam Long id, Model model) {
-        model.addAttribute("ticket", tDao.getOne(id));
-        System.out.println("pokaz " + tDao.getOne(id));
-        return "showdetail.io";
-    }
+    @RequestMapping("deleteticket.io")
+    public String deleteTicket(@RequestParam Long id, Model model) {
 
+        Ticket t = tDao.getOne(id);
+        tDao.delete(t);
+        return "redirect:showTickets.io";
+    }
 }

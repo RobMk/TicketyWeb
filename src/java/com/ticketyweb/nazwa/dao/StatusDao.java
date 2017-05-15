@@ -5,11 +5,13 @@ import com.ticketyweb.nazwa.utils.HibernateUtil;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author robo
  */
+@Repository
 public class StatusDao {
 
 

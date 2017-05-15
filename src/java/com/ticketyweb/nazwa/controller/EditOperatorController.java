@@ -7,6 +7,7 @@ package com.ticketyweb.nazwa.controller;
 
 import com.ticketyweb.nazwa.dao.OperatorDao;
 import com.ticketyweb.nazwa.model.Operator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class EditOperatorController {
 
-    OperatorDao oDao = new OperatorDao();
+    @Autowired
+    OperatorDao oDao;
 
     @RequestMapping(value = "/editOperator.io", method = RequestMethod.GET)
     public String wyswietlForm(@RequestParam Long id, Model model) {
@@ -36,5 +38,3 @@ public class EditOperatorController {
         return "redirect:/testspring/showoperators.io";
     }
 }
-
-

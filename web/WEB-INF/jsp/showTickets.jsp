@@ -10,7 +10,6 @@
 <html>
     <head>
         <link href="/TicketyWebNazwa/css/bootstrap.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="/TicketyWebNazwa/js/bootstrap.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lista ticketów</title>
@@ -35,7 +34,7 @@
                         <td>${t.operator.imie} ${t.operator.nazwisko}</td>
                         <td><a href="showdetails.io?id=${t.nrTicketa}" class="btn btn-info">Pokaż</a>&nbsp;
                             <a href="editdetails.io?id=${t.nrTicketa}" class="btn btn-warning">Edytuj</a>&nbsp;
-                            <a href=" " class="btn btn-danger">Kasuj</a></td>
+                            <a href="deleteticket.io?id=${t.nrTicketa}" class="btn btn-danger">Kasuj</a></td>
                     </tr>  
                 </c:forEach>
             </table>

@@ -11,6 +11,7 @@ import com.ticketyweb.nazwa.dao.StatusDao;
 import com.ticketyweb.nazwa.dao.TicketDao;
 import com.ticketyweb.nazwa.dao.TypyTicketuDao;
 import com.ticketyweb.nazwa.model.Ticket;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,28 +25,29 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AddNewTicketController {
 
-    OperatorDao oDao = new OperatorDao();
+   
     PriorytetDao pDao = new PriorytetDao();
     TypyTicketuDao ttDao = new TypyTicketuDao();
     TicketDao tDao = new TicketDao();
     StatusDao sDao = new StatusDao();
+    OperatorDao oDao = new OperatorDao();
     
     @RequestMapping(value = "/newticket.io", method = RequestMethod.GET)
-    public String addNewTicket(Model model){
+    public String addNewTicket(Model model) {
         model.addAttribute("addticket", new Ticket());
         model.addAttribute("operator", oDao.getAll());
         model.addAttribute("priorytet", pDao.getAll());
         model.addAttribute("typticketu", ttDao.getAll());
         model.addAttribute("status", sDao.getAll());
-        
-    return "addTicket";
-}
-    
-      @RequestMapping(value = "newticket.io", method = RequestMethod.POST)
-    public String getForm(Ticket t){
-        System.out.println("Zapisuję do bazy nowy ticket "+ t.toString());
+
+        return "addTicket";
+    }
+
+    @RequestMapping(value = "newticket.io", method = RequestMethod.POST)
+    public String getForm(Ticket t) {
+        System.out.println("Zapisuję do bazy nowy ticket " + t.toString());
         tDao.save(t);
-        return"redirect:/testspring/showtickets.io";
+        return "redirect:/testspring/showtickets.io";
     }
 //
 //    @Override

@@ -9,11 +9,13 @@ import java.util.List;
 import com.ticketyweb.nazwa.utils.DatabaseConnector;
 import com.ticketyweb.nazwa.utils.HibernateUtil;
 import org.hibernate.Session;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Robo
  */
+@Repository
 public class OperatorDao {
     
     public void editOperator(Operator o){

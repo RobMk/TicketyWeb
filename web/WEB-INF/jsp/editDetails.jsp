@@ -10,7 +10,6 @@
 <html>
     <head>
         <link href="/TicketyWebNazwa/css/bootstrap.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="/TicketyWebNazwa/js/bootstrap.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Edit ticket</title>
@@ -26,8 +25,8 @@
                 <table border="1" class="table table-hover">
 
                     <form:hidden path="nrTicketa"/>
-                   
-                    
+
+
                     <tr><td>Tytuł</td><td><form:input  path="tytulTicketa" type="text" cssClass="form-control"/></td></tr>
                     <tr><td>Opis</td><td><form:input path="opisTicketa" cssClass="form-control"/></td></tr>
                     <tr>
@@ -96,8 +95,8 @@
                     </td>
                     </tr>
                 </table>
-                    <br>
-                    <input type="submit" value="Zapisz" class="btn btn-success"</a>
+                <br>
+                <input type="submit" value="Zapisz" class="btn btn-success"</a>
             </form:form> 
         </div>
     </body>

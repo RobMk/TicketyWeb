@@ -10,7 +10,6 @@
 <html>
     <head>
         <link href="/TicketyWebNazwa/css/bootstrap.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="/TicketyWebNazwa/js/bootstrap.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Edytuj operatora</title>

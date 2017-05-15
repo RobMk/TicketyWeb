@@ -10,7 +10,6 @@
 <html>
     <head>
         <link href="/TicketyWebNazwa/css/bootstrap.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="/TicketyWebNazwa/js/bootstrap.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add Operator</title>
@@ -22,16 +21,16 @@
             <br>
             <h1>Dodawanie operatora</h1>
             <br> <br>
-           
-                <form:form method="POST" modelAttribute="addoperator" >
-                    <table>  
-                        <form:hidden path="nrOperatora"/>
-                        <tr><td>Imię:</td><td><form:input path="imie" class="form-control input-md"/></td></tr>
-                        <tr><td>Nazwisko:</td><td><form:input path="nazwisko" class="form-control input-md"/></td></tr>
 
-                    </table>
-                    <br>
-                    <input type="submit" value="Zapisz" class="btn btn-success">
-                </form:form>
-                </body>
-                </html>
+            <form:form method="POST" modelAttribute="addoperator" >
+                <table>  
+                    <form:hidden path="nrOperatora"/>
+                    <tr><td>Imię:</td><td><form:input path="imie" class="form-control input-md"/></td></tr>
+                    <tr><td>Nazwisko:</td><td><form:input path="nazwisko" class="form-control input-md"/></td></tr>
+
+                </table>
+                <br>
+                <input type="submit" value="Zapisz" class="btn btn-success">
+            </form:form>
+            </body>
+            </html>
